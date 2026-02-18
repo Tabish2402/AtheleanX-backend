@@ -1,0 +1,19 @@
+fastapi
+uvicorn
+python-dotenv
+sqlalchemy
+psycopg2-binary
+
+# auth & security
+passlib[argon2]
+argon2-cffi
+python-jose
+python-multipart
+
+# migrations
+alembic
+pydantic[email]
+
+# ai / external calls
+openai
+httpx
