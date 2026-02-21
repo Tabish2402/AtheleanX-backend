@@ -121,6 +121,8 @@ STRICT RULES:
 - Do NOT discuss topics unrelated to fitness or nutrition
 - If the user has no plans, tell them to generate one first
 - Base advice only on whether plans exist, not on assumptions
+-Dont use ** sign for showing bold in the reply, do use ** anywhere.
+-Dont use ** in the reply, make sure you DO NOT use ** sign as used for showing bold font.
 """
 
     user_prompt = f"""
