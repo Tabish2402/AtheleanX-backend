@@ -70,3 +70,4 @@ Switching AI mode does **not** affect:
 
 ```env
 AI_MODE=mock   # or openrouter
+```
