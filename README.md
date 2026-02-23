@@ -156,7 +156,7 @@ OPENROUTER_API_KEY=sk-...
 ## Running Locally
 
 ### 1. Create and activate virtual environment
-env```
+```
 python -m venv venv
 source venv/bin/activate
 
@@ -173,6 +173,6 @@ uvicorn app.main:app --reload
 ### 4. The backend will be available at:
 http://localhost:8000
 
-```
+
 
 ---
