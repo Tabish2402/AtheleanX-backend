@@ -87,3 +87,67 @@ AI_MODE=mock   # or openrouter
 - **Server**: Uvicorn
 
 ---
+## 🔐 Authentication
+
+### Endpoints
+- `POST /auth/signup` — Create a user (**does not log in**)
+- `POST /auth/login` — Authenticate and receive JWT
+- `GET /auth/me` — Get current user (**protected**)
+
+### Notes
+- JWT is required for all protected endpoints
+- Tokens must be sent as:
+ ---
+ - Signup and login are intentionally separate
+
+---
+
+## 🤖 GenAI Endpoints
+
+### Workout Generation
+- `POST /generate/workout`
+- Deterministic
+- Schema-driven JSON response
+- Stored as structured JSON (`JSONB`)
+
+### Diet Generation
+- `POST /generate/diet`
+- Deterministic
+- Schema-driven JSON response
+- Stored as structured JSON (`JSONB`)
+
+### AI Coach
+- `POST /coach/chat`
+- `GET /coach/history`
+- Context-aware (uses latest workout & diet)
+- Plain text responses
+- Chat history persisted per user
+
+---
+
+## 🗄️ Database Design
+
+- PostgreSQL (Supabase)
+- JSONB used for AI-generated plans
+- Relational tables for:
+- Users
+- Workout plans
+- Diet plans
+- Coach chat messages
+- Alembic manages all schema migrations
+
+---
+
+## 🌍 Environment Variables
+
+Example `.env` file:
+
+```env
+DATABASE_URL=postgresql+psycopg2://...
+JWT_SECRET=supersecret
+JWT_ALGORITHM=HS256
+ACCESS_TOKEN_EXPIRE_MINUTES=60
+
+AI_MODE=mock
+OPENROUTER_API_KEY=sk-...
+```
