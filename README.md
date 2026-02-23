@@ -71,3 +71,19 @@ Switching AI mode does **not** affect:
 ```env
 AI_MODE=mock   # or openrouter
 ```
+---
+
+## 🧩 Tech Stack
+
+- **Framework**: FastAPI (Python)
+- **Database**: PostgreSQL (Supabase)
+- **ORM**: SQLAlchemy
+- **Migrations**: Alembic
+- **Authentication**: JWT (Bearer tokens)
+- **Password Hashing**: Argon2
+- **AI Providers**:
+  - Mock AI (default)
+  - OpenRouter (OpenAI-compatible)
+- **Server**: Uvicorn
+
+---
