@@ -159,16 +159,20 @@ OPENROUTER_API_KEY=sk-...
 ```
 python -m venv venv
 source venv/bin/activate
+```
 
 ### 2. Install dependencies
+```
 pip install -r requirements.txt
-
+```
 ### 3. Run database migrations
+```
 alembic upgrade head
-
+```
 ### 4. Start the server
+```
 uvicorn app.main:app --reload
-
+```
 
 ### 4. The backend will be available at:
 http://localhost:8000
