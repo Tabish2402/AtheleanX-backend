@@ -15,9 +15,9 @@ router = APIRouter(prefix="/auth", tags=["auth"])
 def signup(payload: SignupRequest, db: Session = Depends(get_db)):
     try:
         user = create_user(
-            db=db,
-            email=payload.email,
-            password=payload.password,
+            db=db, 
+            email=payload.email, 
+            password=payload.password,  
         )
         return user
     except ValueError as e:

@@ -70,6 +70,7 @@ STRICT RULES:
 - Respect calorie target across all meals combined
 - Respect diet type and allergies
 - Do NOT include explanations, totals, or metadata
+- The diet should strictly be Indian, this app is sprecific for indian users only. So the meals and items should be strictly from Indian cuisine.
 """
 
     user_prompt = f"""

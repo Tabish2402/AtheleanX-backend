@@ -144,9 +144,7 @@ Return ONLY valid JSON. No markdown. No explanation.
         raw = response.choices[0].message.content.strip()
         raw = response.choices[0].message.content
 
-        print("========== RAW LLM OUTPUT ==========")   
-        print(raw)
-        print("====================================")
+     
     
         
     

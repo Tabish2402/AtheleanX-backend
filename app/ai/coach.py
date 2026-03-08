@@ -97,7 +97,7 @@ def _real_coach_reply(
     load_dotenv(dotenv_path=".env", override=True)
 
     OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
-    OPENROUTER_MODEL = os.getenv("OPENROUTER_MODEL", "openai/gpt-4o-mini")
+    OPENROUTER_MODEL = os.getenv("OPENROUTER_MODEL")
 
     if not OPENROUTER_API_KEY:
         raise RuntimeError("OPENROUTER_API_KEY not set")

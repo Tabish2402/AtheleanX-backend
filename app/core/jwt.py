@@ -3,9 +3,6 @@ from typing import Any
 import os
 from jose import jwt, JWTError
 
-# ------------------------------------------------------------------
-# JWT configuration
-# ----------------------------------------------------------------__
 
 ALGORITHM = "HS256"
 
@@ -21,9 +18,8 @@ if not SECRET_KEY:
 ACCESS_TOKEN_EXPIRE_MINUTES = 60
 
 
-# ------------------------------------------------------------------
 # Token creation
-# ------------------------------------------------------------------
+
 
 def create_access_token(subject: str | int) -> str:
     """
@@ -50,9 +46,9 @@ def create_access_token(subject: str | int) -> str:
     return encoded_jwt
 
 
-# ------------------------------------------------------------------
+
 # Token verification
-# ------------------------------------------------------------------
+
 
 def verify_access_token(token: str) -> dict[str, Any]:
     """
